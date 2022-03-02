@@ -19,7 +19,7 @@ Enum meta::external::format::protobuf::metamodel::Syntax
    proto2,proto3
 }
 
-Class meta::external::format::protobuf::metamodel::ProtoFile extends meta::external::shared::format::metamodel::SchemaDetail
+Class meta::external::format::protobuf::metamodel::ProtoFile
 [
   //Initially implemented this with multiple inheritance but more than one super type is not currently supported in several flows
   $this.topLevelDefs->map( t | $t->class()->in([Message,Service,meta::external::format::protobuf::metamodel::Enumeration]))->and()
