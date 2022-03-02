@@ -67,6 +67,7 @@
         <module>legend-pure-code-compiled-core-external-shared</module>
         <module>legend-pure-code-compiled-core-external-format-flatdata</module>
         <module>legend-pure-code-compiled-core-external-format-json</module>
+        <module>legend-pure-code-compiled-core-external-format-protobuf</module>
         <module>legend-pure-code-compiled-core-external-format-xml</module>
         <module>legend-pure-code-compiled-core-external-query-graphql</module>
 
@@ -462,6 +463,11 @@
             <dependency>
                 <groupId>org.finos.legend.pure</groupId>
                 <artifactId>legend-pure-code-compiled-core-external-format-flatdata</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.finos.legend.pure</groupId>
+                <artifactId>legend-pure-code-compiled-core-external-format-protobuf</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
