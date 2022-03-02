@@ -19,9 +19,9 @@ Enum meta::external::format::protobuf::metamodel::Syntax
    proto2,proto3
 }
 
-Class meta::external::format::protobuf::metamodel::ProtoFile
+Class meta::external::format::protobuf::metamodel::ProtoFile extends meta::external::shared::format::metamodel::SchemaDetail
 [
-  //Initially implemented this with multiple inheritence but more than one super type is not currently supported in several flows
+  //Initially implemented this with multiple inheritance but more than one super type is not currently supported in several flows
   $this.topLevelDefs->map( t | $t->class()->in([Message,Service,meta::external::format::protobuf::metamodel::Enumeration]))->and()
 ]
 {
@@ -50,7 +50,7 @@ Enum meta::external::format::protobuf::metamodel::ImportType
 
 Class meta::external::format::protobuf::metamodel::Message extends meta::external::format::protobuf::metamodel::ProtoItemDefinition
 [
-  //Initially implemented this with multiple inheritence but more than one super type is not currently supported in several flows
+  //Initially implemented this with multiple inheritance but more than one super type is not currently supported in several flows
   $this.content->map( t | $t->class()->in([Message,Field,MessageOption,OneOf,ReservedFieldNames,ReservedFieldRanges, meta::external::format::protobuf::metamodel::Enumeration]))->and()
 ]
 {
